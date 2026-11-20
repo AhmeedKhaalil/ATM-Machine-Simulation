@@ -11,7 +11,7 @@ public class Main {
         int transactions = 0;
         while (attempts<3)
        {
-           System.out.println("Enter The PIN");
+           System.out.println("Enter The PIN:");
            PIN=scan.nextInt();
            if (PIN==1234)
            {
@@ -59,14 +59,14 @@ public class Main {
                         System.out.println("Enter withdrawal amount:");
                         double withdraw = scan.nextDouble();
                         if (withdraw < 0)
-                            System.out.println("Invalid amount");
+                            System.out.println("Invalid amount.");
                         else if (withdraw > balance)
                             System.out.println("Insufficient balance.");
                         else if (withdraw == 0)
-                            System.out.println("Transaction cancelled");
+                            System.out.println("Transaction cancelled.");
                         else {
                             balance -= withdraw;
-                            System.out.println("Your balance after withdraw:" + balance);
+                            System.out.println("Your balance after withdrawal:" + balance);
                             transactions++;
                             if (balance == 0)
                                 System.out.println("Warning: Your account is empty.");
@@ -88,7 +88,7 @@ public class Main {
                         break;
                     }
                     default: {
-                        System.out.println("Invalid option");
+                        System.out.println("Invalid option.");
                     }
                 }
 
